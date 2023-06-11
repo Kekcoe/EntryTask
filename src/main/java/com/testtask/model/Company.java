@@ -10,7 +10,7 @@ public class Company extends BaseEntity{
     private String name;
 
     /**Правовая форма*/
-    private String legalform;
+    private String legalForm;
 
     /**Адрес*/
     private String adress;
@@ -22,6 +22,14 @@ public class Company extends BaseEntity{
 
     }
 
+    public Company(String name, String legalForm, String adress, String branches) {
+        super();
+        this.name = name;
+        this.legalForm = legalForm;
+        this.adress = adress;
+        this.adress = branches;
+    }
+
     @NotNull
     public String getName() {
         return name;
@@ -31,12 +39,12 @@ public class Company extends BaseEntity{
         this.name = name;
     }
 
-    public String getLegalform() {
-        return legalform;
+    public String getLegalForm() {
+        return legalForm;
     }
 
-    public void setLegalform(String legalform) {
-        this.legalform = legalform;
+    public void setLegalForm(String legalForm) {
+        this.legalForm = legalForm;
     }
 
     @NotNull
