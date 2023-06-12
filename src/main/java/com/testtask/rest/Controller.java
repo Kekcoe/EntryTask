@@ -12,6 +12,7 @@ import javax.inject.Inject;
 import java.util.List;
 
 public class Controller extends SelectorComposer<Component> {
+
     @Inject
     CompanyDao companyDao;
 
@@ -23,9 +24,11 @@ public class Controller extends SelectorComposer<Component> {
     public void doAfterCompose(Component comp) throws Exception {
         super.doAfterCompose(comp);
         refreshCompaniesList();
+        System.out.println("222222222222222222222222222222222");
     }
 
     private void refreshCompaniesList() {
+        System.out.println("222222222222222222222222222222222");
         List<Company> companyList = companyDao.selectAllCompanies();
         companiesListBox.setModel(new ListModelList<>(companyList));
     }

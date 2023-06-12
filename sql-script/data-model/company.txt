@@ -1,0 +1,8 @@
+CREATE TABLE companies (
+    id NVARCHAR(40) PRIMARY KEY,
+    version NUMERIC(19,0),
+    name NVARCHAR(1000),
+    legalform NVARCHAR(100),
+    adress NVARCHAR(1000),
+    branches NVARCHAR(40)
+)COMMENT='Основные данные о компании';

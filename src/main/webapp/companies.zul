@@ -1,0 +1,16 @@
+    <window apply="com.testtask.rest.Controller">
+    <hbox>
+        <Listbox id="companiesListBox" forEach="${companiesListBox}" var="company" forEachStatus="status">
+            <listitem>
+                <listcell>${status.index + 1}</listcell>
+                <listcell>${company.name}</listcell>
+            </listitem>
+        </Listbox>
+        <hlayout style="margin-top:20px" width="100%">
+            <image id="previewImage" width="250px" />
+            <vlayout hflex="1">
+                <label id="nameLabel"/>
+            </vlayout>
+        </hlayout>
+    </hbox>
+    </window>

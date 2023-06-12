@@ -1,7 +1,6 @@
 package com.testtask.service;
 
 import com.testtask.model.Company;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
