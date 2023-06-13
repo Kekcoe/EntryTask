@@ -1,16 +1,22 @@
     <window apply="com.testtask.rest.Controller">
-    <hbox>
-        <Listbox id="companiesListBox" forEach="${companiesListBox}" var="company" forEachStatus="status">
+        <listbox id="companiesListBox" rows="3">
+            <listhead>
+                <listheader label="Id" />
+                <listheader label="Name" />
+                <listheader label= "Legal form"/>
+            </listhead>
             <listitem>
-                <listcell>${status.index + 1}</listcell>
-                <listcell>${company.name}</listcell>
+                <listcell label="${each.id}"/>
+                <listcell label="${each.name}"/>
+                <listcell label="${each.legalform}"/>
             </listitem>
-        </Listbox>
+        </listbox>
         <hlayout style="margin-top:20px" width="100%">
             <image id="previewImage" width="250px" />
             <vlayout hflex="1">
+                <label id="idLabel"/>
                 <label id="nameLabel"/>
+                <label id="legalFormLabel"/>
             </vlayout>
         </hlayout>
-    </hbox>
     </window>

@@ -3,6 +3,8 @@ package com.testtask.util;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.PersistenceContext;
+
 public class SessionUtil {
 
     private Session session;
