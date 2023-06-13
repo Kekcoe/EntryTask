@@ -7,6 +7,7 @@ import javax.persistence.PersistenceContext;
 
 public class SessionUtil {
 
+    @PersistenceContext(name = "companiesPU")
     private Session session;
     private Transaction transaction;
 

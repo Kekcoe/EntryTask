@@ -9,11 +9,12 @@ import org.hibernate.query.Query;
 
 import javax.ejb.Stateless;
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
 import java.util.List;
 import java.util.logging.Logger;
 
 
-@Stateless
+@Named
 public class CompanyDaoService extends SessionUtil implements CompanyDao {
     private static final Logger log = Logger.getLogger(CompanyDaoService.class.getName());
 

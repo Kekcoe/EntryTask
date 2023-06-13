@@ -2,7 +2,6 @@ package com.testtask.rest;
 
 import com.testtask.dao.CompanyDao;
 import com.testtask.model.Company;
-import com.testtask.service.CompanyDaoService;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Wire;
@@ -17,11 +16,18 @@ public class Controller extends SelectorComposer<Component> {
 
     Logger log = Logger.getLogger(Controller.class.getName());
 
-    private final CompanyDao companyDao = new CompanyDaoService() ;
+    private final CompanyDao companyDao;
+    public Controller(CompanyDao companyDao) {
+        this.companyDao = companyDao;
+    }
+
+//    private final CompanyDao companyDao = new CompanyDaoService() ;
 
 
     @Wire
     private Listbox companiesListBox;
+
+
 
     @Override
     public void doAfterCompose(Component comp) throws Exception {
